@@ -21,7 +21,7 @@ Minimal UI kit by **AskSoft** — white sidebar, Inter font, Tailwind CDN + Alpi
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <!-- 4. AskUI -->
-<link rel="stylesheet" href="path/to/dist/askui.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alfa-kappa/askui@main/dist/askui.css">
 ```
 
 ## Classes
