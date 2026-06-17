@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskUI — Component Reference</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] } } }
+        }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="../dist/askui.css">
+    <style>
+        body { background: #f1f5f9; font-family: 'Inter', sans-serif; }
+        .section-title {
+            font-size: .6875rem; font-weight: 800; letter-spacing: .12em;
+            text-transform: uppercase; color: #94a3b8; margin-bottom: 16px;
+        }
+        .code-block {
+            background: #0f172a; color: #94a3b8; border-radius: 10px;
+            padding: 12px 16px; font-size: .75rem; font-family: monospace;
+            overflow-x: auto; margin-top: 8px; line-height: 1.7;
+        }
+        .code-block .kw  { color: #7dd3fc; }
+        .code-block .cl  { color: #86efac; }
+        .code-block .st  { color: #fde68a; }
+    </style>
+</head>
+<body class="p-6 lg:p-10 space-y-10">
+
+    <!-- Header -->
+    <div class="flex items-center gap-4">
+        <div style="background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:14px;width:48px;height:48px;"
+             class="flex items-center justify-center text-white font-black text-xl shrink-0">A</div>
+        <div>
+            <h1 style="font-size:1.5rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;">AskUI</h1>
+            <p style="font-size:.875rem;color:#64748b;">Component Reference · v1.0.0 · by AskSoft</p>
+        </div>
+        <div class="ml-auto hidden sm:flex items-center gap-3">
+            <span class="badge badge-blue">No build step</span>
+            <span class="badge badge-purple">Alpine.js</span>
+            <span class="badge badge-green">Tailwind CDN</span>
+        </div>
+    </div>
+
+    <!-- Install -->
+    <div class="card p-6">
+        <p class="section-title">Εγκατάσταση</p>
+        <div class="code-block">&lt;<span class="kw">link</span> <span class="cl">rel</span>=<span class="st">"preconnect"</span> <span class="cl">href</span>=<span class="st">"https://fonts.googleapis.com"</span>&gt;
+&lt;<span class="kw">link</span> <span class="cl">href</span>=<span class="st">"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"</span> <span class="cl">rel</span>=<span class="st">"stylesheet"</span>&gt;
+&lt;<span class="kw">script</span> <span class="cl">src</span>=<span class="st">"https://cdn.tailwindcss.com"</span>&gt;&lt;/<span class="kw">script</span>&gt;
+&lt;<span class="kw">script</span> <span class="cl">defer</span> <span class="cl">src</span>=<span class="st">"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"</span>&gt;&lt;/<span class="kw">script</span>&gt;
+&lt;<span class="kw">link</span> <span class="cl">rel</span>=<span class="st">"stylesheet"</span> <span class="cl">href</span>=<span class="st">"askui.css"</span>&gt;</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="card p-6">
+        <p class="section-title">Buttons</p>
+        <div class="flex flex-wrap gap-3 items-center">
+            <button class="btn-primary">Primary</button>
+            <button class="btn-primary btn-sm">Primary Small</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-secondary btn-sm">Secondary Small</button>
+            <button class="btn-danger">Danger</button>
+            <button class="btn-danger btn-sm">Danger Small</button>
+        </div>
+        <div class="code-block">&lt;<span class="kw">button</span> <span class="cl">class</span>=<span class="st">"btn-primary"</span>&gt;Primary&lt;/<span class="kw">button</span>&gt;
+&lt;<span class="kw">button</span> <span class="cl">class</span>=<span class="st">"btn-primary btn-sm"</span>&gt;Primary Small&lt;/<span class="kw">button</span>&gt;
+&lt;<span class="kw">button</span> <span class="cl">class</span>=<span class="st">"btn-secondary"</span>&gt;Secondary&lt;/<span class="kw">button</span>&gt;
+&lt;<span class="kw">button</span> <span class="cl">class</span>=<span class="st">"btn-danger"</span>&gt;Danger&lt;/<span class="kw">button</span>&gt;</div>
+    </div>
+
+    <!-- Badges -->
+    <div class="card p-6">
+        <p class="section-title">Badges</p>
+        <div class="flex flex-wrap gap-2">
+            <span class="badge badge-blue">Blue</span>
+            <span class="badge badge-green">Green</span>
+            <span class="badge badge-yellow">Yellow</span>
+            <span class="badge badge-red">Red</span>
+            <span class="badge badge-purple">Purple</span>
+            <span class="badge badge-orange">Orange</span>
+            <span class="badge badge-gray">Gray</span>
+        </div>
+        <div class="code-block">&lt;<span class="kw">span</span> <span class="cl">class</span>=<span class="st">"badge badge-green"</span>&gt;Green&lt;/<span class="kw">span</span>&gt;
+&lt;<span class="kw">span</span> <span class="cl">class</span>=<span class="st">"badge badge-red"</span>&gt;Red&lt;/<span class="kw">span</span>&gt;
+&lt;<span class="kw">span</span> <span class="cl">class</span>=<span class="st">"badge badge-yellow"</span>&gt;Yellow&lt;/<span class="kw">span</span>&gt;</div>
+    </div>
+
+    <!-- Alerts -->
+    <div class="card p-6 space-y-3">
+        <p class="section-title">Alerts</p>
+        <div class="alert alert-success">
+            <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Η ενέργεια ολοκληρώθηκε με επιτυχία.</span>
+        </div>
+        <div class="alert alert-error">
+            <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Παρουσιάστηκε σφάλμα. Δοκιμάστε ξανά.</span>
+        </div>
+        <div class="alert alert-warning">
+            <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <span>Προσοχή — αυτή η ενέργεια είναι μη αναστρέψιμη.</span>
+        </div>
+        <div class="alert alert-info">
+            <svg class="w-5 h-5 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Πληροφορία: το σύστημα θα ενημερωθεί αύριο.</span>
+        </div>
+        <div class="code-block">&lt;<span class="kw">div</span> <span class="cl">class</span>=<span class="st">"alert alert-success"</span>&gt;...&lt;/<span class="kw">div</span>&gt;
+&lt;<span class="kw">div</span> <span class="cl">class</span>=<span class="st">"alert alert-error"</span>&gt;...&lt;/<span class="kw">div</span>&gt;
+&lt;<span class="kw">div</span> <span class="cl">class</span>=<span class="st">"alert alert-warning"</span>&gt;...&lt;/<span class="kw">div</span>&gt;
+&lt;<span class="kw">div</span> <span class="cl">class</span>=<span class="st">"alert alert-info"</span>&gt;...&lt;/<span class="kw">div</span>&gt;</div>
+    </div>
+
+    <!-- Form -->
+    <div class="card p-6">
+        <p class="section-title">Form Elements</p>
+        <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+                <label class="form-label">Πεδίο κειμένου</label>
+                <input type="text" class="form-input" placeholder="Γράψτε κάτι…">
+                <p class="form-hint">Βοηθητικό κείμενο εδώ</p>
+            </div>
+            <div>
+                <label class="form-label">Επιλογή</label>
+                <select class="form-input">
+                    <option>Επιλογή 1</option>
+                    <option>Επιλογή 2</option>
+                    <option>Επιλογή 3</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">Με σφάλμα</label>
+                <input type="text" class="form-input" style="border-color:#f87171;" value="Λάθος τιμή">
+                <p class="form-error">Αυτό το πεδίο είναι υποχρεωτικό.</p>
+            </div>
+            <div>
+                <label class="form-label">Textarea</label>
+                <textarea class="form-input" rows="3" placeholder="Περιγραφή…"></textarea>
+            </div>
+        </div>
+        <div class="code-block">&lt;<span class="kw">label</span> <span class="cl">class</span>=<span class="st">"form-label"</span>&gt;Όνομα&lt;/<span class="kw">label</span>&gt;
+&lt;<span class="kw">input</span> <span class="cl">type</span>=<span class="st">"text"</span> <span class="cl">class</span>=<span class="st">"form-input"</span> <span class="cl">placeholder</span>=<span class="st">"..."</span>&gt;
+&lt;<span class="kw">p</span> <span class="cl">class</span>=<span class="st">"form-hint"</span>&gt;Βοηθητικό κείμενο&lt;/<span class="kw">p</span>&gt;
+&lt;<span class="kw">p</span> <span class="cl">class</span>=<span class="st">"form-error"</span>&gt;Μήνυμα σφάλματος&lt;/<span class="kw">p</span>&gt;</div>
+    </div>
+
+    <!-- Table -->
+    <div class="card overflow-hidden">
+        <div class="p-6 pb-0"><p class="section-title">Table</p></div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-100">
+                <thead style="background:#f9fafb;">
+                    <tr>
+                        <th class="th">Όνομα</th>
+                        <th class="th">Κατάσταση</th>
+                        <th class="th text-right">Ποσό</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 bg-white">
+                    <tr class="tr-hover">
+                        <td class="td font-semibold text-gray-900">Γιώργης Παπαδόπουλος</td>
+                        <td class="td"><span class="badge badge-green">Ενεργός</span></td>
+                        <td class="td text-right font-semibold">€ 1.250,00</td>
+                    </tr>
+                    <tr class="tr-hover">
+                        <td class="td font-semibold text-gray-900">Μαρία Ιωαννίδου</td>
+                        <td class="td"><span class="badge badge-yellow">Σε εκκρεμότητα</span></td>
+                        <td class="td text-right font-semibold">€ 340,00</td>
+                    </tr>
+                    <tr class="tr-hover">
+                        <td class="td font-semibold text-gray-900">Νίκος Αλεξίου</td>
+                        <td class="td"><span class="badge badge-gray">Ανενεργός</span></td>
+                        <td class="td text-right font-semibold">€ 0,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Nav items -->
+    <div class="card p-6">
+        <p class="section-title">Sidebar Nav</p>
+        <div class="flex gap-8 flex-wrap">
+            <div style="width:220px;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px;">
+                <p class="nav-section" style="margin-top:4px;">Κύριο Μενού</p>
+                <a href="#" class="nav-item active">
+                    <svg class="w-[17px] h-[17px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="w-[17px] h-[17px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    <span>Παραγγελίες</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="w-[17px] h-[17px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span>Πελάτες</span>
+                </a>
+                <p class="nav-section">Ρυθμίσεις</p>
+                <a href="#" class="nav-item">
+                    <svg class="w-[17px] h-[17px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    <span>Ρυθμίσεις</span>
+                </a>
+            </div>
+            <div class="flex-1 min-w-[200px]">
+                <div class="code-block">&lt;<span class="kw">a</span> <span class="cl">href</span>=<span class="st">"#"</span> <span class="cl">class</span>=<span class="st">"nav-item active"</span>&gt;Dashboard&lt;/<span class="kw">a</span>&gt;
+&lt;<span class="kw">a</span> <span class="cl">href</span>=<span class="st">"#"</span> <span class="cl">class</span>=<span class="st">"nav-item"</span>&gt;Παραγγελίες&lt;/<span class="kw">a</span>&gt;
+&lt;<span class="kw">p</span> <span class="cl">class</span>=<span class="st">"nav-section"</span>&gt;Ρυθμίσεις&lt;/<span class="kw">p</span>&gt;</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth card -->
+    <div class="card p-6">
+        <p class="section-title">Auth Card</p>
+        <div class="flex justify-center py-4" style="background:linear-gradient(150deg,#eff6ff,#f5f3ff,#fdf2f8);border-radius:12px;">
+            <div class="auth-card">
+                <div style="text-align:center;margin-bottom:24px;">
+                    <div style="background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:14px;width:48px;height:48px;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;">
+                        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h2 style="font-size:1.25rem;font-weight:800;color:#0f172a;">Καλώς ήρθατε</h2>
+                    <p style="font-size:.875rem;color:#94a3b8;margin-top:4px;">Εισάγετε τα στοιχεία σας</p>
+                </div>
+                <div style="margin-bottom:16px;">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="auth-input" placeholder="user@company.gr">
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label class="form-label">Κωδικός</label>
+                    <input type="password" class="auth-input" placeholder="••••••••">
+                </div>
+                <button class="auth-btn">Σύνδεση</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Colors -->
+    <div class="card p-6">
+        <p class="section-title">Color Tokens</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div>
+                <div style="height:48px;background:#2563eb;border-radius:10px;margin-bottom:6px;"></div>
+                <p style="font-size:.75rem;font-weight:600;color:#374151;">Brand Blue</p>
+                <p style="font-size:.7rem;color:#9ca3af;">#2563eb</p>
+            </div>
+            <div>
+                <div style="height:48px;background:#7c3aed;border-radius:10px;margin-bottom:6px;"></div>
+                <p style="font-size:.75rem;font-weight:600;color:#374151;">Brand Purple</p>
+                <p style="font-size:.7rem;color:#9ca3af;">#7c3aed</p>
+            </div>
+            <div>
+                <div style="height:48px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;margin-bottom:6px;"></div>
+                <p style="font-size:.75rem;font-weight:600;color:#374151;">Brand Light</p>
+                <p style="font-size:.7rem;color:#9ca3af;">#eff6ff</p>
+            </div>
+            <div>
+                <div style="height:48px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;margin-bottom:6px;"></div>
+                <p style="font-size:.75rem;font-weight:600;color:#374151;">Page BG</p>
+                <p style="font-size:.7rem;color:#9ca3af;">#f1f5f9</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center pb-10" style="font-size:.75rem;color:#94a3b8;">
+        AskUI v1.0.0 · AskSoft · asksoft.gr
+    </div>
+
+</body>
+</html>
